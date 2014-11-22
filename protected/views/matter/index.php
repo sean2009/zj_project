@@ -57,7 +57,7 @@
 					<td class="txt-center"><a href="<?php echo $this->createUrl('zhuanfa',array('id'=>$v->id)); ?>">转发</a></td>
 					<?php endif;?>
                 </tr>
-            <?php endforeach; ?>
+            <?php endforeach; ?> 
         </tbody>
     </table>
 </div>
