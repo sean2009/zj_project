@@ -36,6 +36,9 @@
 				<?php else:?>
 				<th width="3%">发布日期</th>
 				<?php endif;?>
+				<?php if($is_my_add == 1):?>
+				<th width="3%">操作</th>
+				<?php endif;?>
             </tr>
         </thead>
         <tbody>
@@ -49,6 +52,9 @@
 					<td class="txt-center"><?php echo date('Y-m-d',strtotime($v->complete_time)); ?></td>
 					<?php else:?>
 					<td class="txt-center"><?php echo date('Y-m-d',strtotime($v->add_time)); ?></td>
+					<?php endif;?>
+					<?php if($is_my_add == 1):?>
+					<td class="txt-center"><a href="<?php echo $this->createUrl('zhuanfa',array('id'=>$v->id)); ?>">转发</a></td>
 					<?php endif;?>
                 </tr>
             <?php endforeach; ?>

@@ -57,10 +57,7 @@ class MattersModel extends BaseActiveRecord
 			$this->add_time = new CDbExpression('NOW()');
             $this->add_user_id = Yii::app()->adminuser->user_id;
 			$this->complete_user_id = 0;
-		}else{
-			$this->complete_time = new CDbExpression('NOW()');
-            $this->complete_user_id = Yii::app()->adminuser->user_id;
-        }
+		}
 		return parent::beforeSave();
 	}
 

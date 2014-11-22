@@ -96,6 +96,8 @@
     <?php endif;if ($model->add_user_id == Yii::app()->adminuser->user_id): ?>
         <tr>
             <td colspan="2" align="center" class="matter_td">
+			<input type="button" name="button" id="button_upd" matter_id="<?php echo $model->id; ?>" value="修改" />
+              &nbsp;&nbsp;
               <input type="button" name="button" id="button_del" matter_id="<?php echo $model->id; ?>" value="删除" />
               &nbsp;&nbsp;
             <input type="button" name="button" class="button_return" value="返回" /></td>
@@ -144,6 +146,10 @@
                 });
             }
         });
+		$('#button_upd').click(function(){
+			var matter_id = $(this).attr('matter_id');
+			location.href='<?php echo $this->createUrl('upd'); ?>/id/'+matter_id;
+		});
         $('#button_duty').click(function() {
 //            if (confirm('确定转办么？')) {
             var matter_id = $(this).attr('matter_id');

@@ -54,7 +54,7 @@ class MatterController extends AdminController
             $pagesize = 15;
             $rederData['is_complete'] = $is_complete = isset($_GET['is_complete']) ? $_GET['is_complete'] : NULL;
             $is_time_t = isset($_GET['is_time_t']) ? $_GET['is_time_t'] : NULL;
-            $is_my_add = isset($_GET['is_my_add']) ? $_GET['is_my_add'] : NULL;
+            $rederData['is_my_add'] = $is_my_add = isset($_GET['is_my_add']) ? $_GET['is_my_add'] : NULL;
             $is_my_duty = isset($_GET['is_my_duty']) ? $_GET['is_my_duty'] : NULL;
             $is_name = isset($_GET['is_name']) ? $_GET['is_name'] : NULL;
             $rederData['menu_title'] = $this->getMenuTitle($is_name);
@@ -182,6 +182,20 @@ class MatterController extends AdminController
             $render['arr_duty_user'] = $this->getDutyUser();
             $this->render('view',$render);
         }
+		
+		public function actionUpd($id){
+			$this->layout = '//layouts/main_add_view';
+            $model = MattersModel::model()->findByPk($id);
+            if(isset($_POST['MattersModel']))
+            {
+                    $model->attributes=$_POST['MattersModel'];
+                    if($model->save())
+                            $this->redirect(array('view','id'=>$model->id));
+            }
+            $render['model'] = $model;
+            $render['arr_duty_user'] = $this->getDutyUser();
+            $this->render('upd',$render);
+        }
         
         public function actionBanjie($id,$desc = '') {
             $model = MattersModel::model()->findByPk($id);
@@ -190,6 +204,7 @@ class MatterController extends AdminController
                 exit;
             }
             $model->complete_user_id = Yii::app()->adminuser->user_id;
+			$model->complete_time = new CDbExpression('NOW()');
 			$model->desc = $desc;
             $model->save();
             echo json_encode(array('status'=>'success','msg'=>''));
@@ -226,4 +241,28 @@ class MatterController extends AdminController
             echo json_encode(array('status'=>'success','msg'=>''));
                 exit;
         }
+		
+		public function actionZhuanfa($id){
+			$this->layout = '//layouts/main_add_view';
+            $model = MattersModel::model()->findByPk($id);
+            if(isset($_POST['MattersModel']))
+            {
+					$model = new MattersModel();
+                    $model->attributes=$_POST['MattersModel'];
+                    if($model->save()){
+						//转办后给前责任人发消息
+						$matter_id = Yii::app()->db->getLastInsertID();
+						if($_POST['MattersModel']['handle_date'] == date('Y-m-d',time())){
+							MessageService::model()->sendBanliMessage($matter_id,$_POST['MattersModel']['duty_user_id'],$_POST['MattersModel']['title']);
+						}
+						$this->redirect(array('matter/index','is_my_add'=>1,'is_name'=>4));
+						Yii:app()->end();
+					}
+            }
+            $render['model'] = $model;
+			$render['arr_type'] = $this->getType();
+            $render['arr_duty_department'] = $this->getDutyDepartment();
+            $render['arr_duty_user'] = $this->getDutyUser();
+            $this->render('zhuanfa',$render);
+		}
 }
