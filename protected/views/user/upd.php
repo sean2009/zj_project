@@ -1,0 +1,2 @@
+<h2 class="title-h4 bordBtm1">编辑资料<?php if(isset($_GET['is_succ']) && $_GET['is_succ'] == 1){echo '<span style="color:red">&nbsp;&nbsp;（修改成功！）</span>';}?></h2>
+<?php echo $this->renderPartial('_form',array('model'=>$model,'type'=>'upd'));?>

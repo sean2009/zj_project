@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin:0;padding:0;}
+body, button, input, select, textarea {font:12px/1.5 "microsoft yahei",simsun,sans-serif;}
+h1, h2, h3, h4, h5, h6{font-family:微软雅黑,Microsoft YaHei,黑体;}
+img{border:0px;font-size:0;}
+b,i,em{ font-style:normal;}
+body{-webkit-text-size-adjust:none; background:#f8e9c5;width:100%;}
+ul,li{list-style-type:none}
+li{vertical-align:top;}
+.left{float:left;}
+.right{float:right}
+a{text-decoration:none;cursor:pointer;color:#2d374b;}
+a:hover{text-decoration:underline;color:#c00;}
+a:active, a:focus{-moz-outline:none;outline:none;ie-dummy:expression(this.hideFocus=true);}
+.clearfix{display:block;_zoom:1;}
+.clearfix:after{content:".";display:block;visibility:hidden;height:0;clear:both;}
+h4{ font-size:14px;}
+
+#top{ border-bottom:3px solid #b78449;}
+.status_info{ float:right;margin:10px 10px 0 0;}
+.status_info a{margin:0 5px;}
+.main{margin-top:12px;width:100%; overflow:hidden;zoom:1;}
+#sub_left,#sub_right{ margin-bottom:-9999px; padding-bottom:9999px;}
+#sub_left{width:178px; float:left; border-right:1px solid #f4dfab;}
+#sub_left h4{color:#b68346; text-align:center;border-bottom:1px solid #f4dfab;margin:0 9px;padding-bottom:10px;}
+.menu_index{margin:12px 0 20px; }
+.menu_dl{margin-top:10px;}
+.menu_ft{margin-top:25px;}
+.menu_list li,.menu_dl dt{ background:#f8e9c5 url(../images/dot.png) no-repeat 32px 9px;height:24px; line-height:24px; border-top:1px solid #f8e9c5; border-bottom:1px solid #f8e9c5;padding-left:48px;}
+.menu_list li.cur{ font-weight:bold; border-top:1px solid #f4dfab; border-bottom:1px solid #f4dfab; background:#fef9ec url(../images/dot.png) no-repeat 45px -27px; margin-right:-1px;}
+.menu_dl dt a,.menu_list li a{color:#b68346;}
+.menu_dl li a{color:#555;}
+.menu_dl dd li{ padding-left:60px; background:#f8e9c5 url(../images/dot.png) no-repeat 45px 9px;}
+#sub_right{ background:#fef9ec;margin-left:178px;border-top:1px solid #f4dfab; overflow:hidden;}
+.right_info{margin:10px 15px;}
+#sub_right .r_tit{color:#b7864b; border-bottom:1px solid #e0e0e0;padding-bottom:5px; text-indent:5px;}
+.grid_list label{ color:#4f4a4a; font-weight:bold;width:120px; overflow:hidden; text-align:right; display:inline;margin-right:5px; float:left;}
+.input_text{ border:1px solid #ccc; background:#fff; height:22px; line-height:22px;}
+.tera_input{ border:1px solid #ccc;width:315px; height:128px;}
+.grid_list li{margin-top:12px; overflow:hidden;zoom:1;}
+.grid_list .inp_box{ float:left;}
+.grid_list li.news_come select{margin-right:8px;}
+.grid_list li .key_tip{ color:#b3afaf;margin:5px 0 0 125px;width:310px;}
+.news_c_tit{margin:30px 0 10px 10px;}
+.news_container textarea{ height:394px;width:90%; border:1px solid #ccc;}
+.submit_btn{ text-align:center;margin-top:10px;}
+.save_btn,.cancel_btn{ background:url(../images/submit_btn.png) no-repeat; display:inline-block; width:62px; height:22px;margin-left:5px; cursor:pointer; border:0;}
+.save_btn{ color:#fff;}
+.cancel_btn{ background-position:-68px 0; color:#333;}
+.adm_tips{ color:#f00; float:left; margin-left:5px; height:24px; line-height:24px;}
+
+.search-bar {background: none repeat scroll 0 0 #F0F0F0;border-bottom: 1px solid #E0E0E0;margin: 10px 0 1px;overflow: hidden;padding: 4px 6px;}
+.search-bar input,.search-bar select{margin-right:5px;}
+.action-bar {background: none repeat scroll 0 0 #F0F0F0;border-bottom: 1px solid #E0E0E0;margin: 1px 0;overflow: hidden;padding: 4px 6px;}
+.datalist{border: 0 none; border-collapse: collapse; line-height: 1.8em;}
+.datalist td {padding: 2px 5px;}
+.datalist thead td {background: none repeat scroll 0 0 #F0F0F0;border-bottom: 1px solid #CCCCCC;color: #333333;font-weight: bold;height: 24px;}
+.datalist tbody td {color: #333333;}
+.datalist td.if_pass img{margin-left:7px;}
+.opera_btn a{ color:#4d37bc;}
+
+/*分页*/
+.pager{ float:right;padding-right:10px;}
+.fy_jl{ float:left;margin:3px 5px 0 0;}
+.yiiPager,.yiiPager li{ float:left; display:inline;}
+.yiiPager li{ background:#fff; border:1px solid #d8c28a;padding:1px 6px;margin-left:5px;}
+.yiiPager li.selected{ background:#fcf3de; font-weight:bold;}

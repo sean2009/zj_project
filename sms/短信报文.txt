@@ -1,0 +1,29 @@
+public string SendMessage(string[] destinationAddresses, string message, string extendCode, string applicationId, string password)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><SendMessage3 xmlns="http://openmas.chinamobile.com/sms"><destinationAddresses xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:string>13429614889</a:string></destinationAddresses><message>......</message><extendCode>0101</extendCode><applicationId>DefaultApplication</applicationId><password/></SendMessage3></s:Body></s:Envelope>
+
+
+public string SendMessage(string[] destinationAddresses, string message, string extendCode, string applicationId, string password, DateTime expectSendTime)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><SendMessage4 xmlns="http://openmas.chinamobile.com/sms"><destinationAddresses xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:string>13429614889</a:string></destinationAddresses><message>......</message><extendCode>0101</extendCode><applicationId>DefaultApplication</applicationId><password/><expectSendTime>2011-02-18T15:06:23.9800973+08:00</expectSendTime></SendMessage4></s:Body></s:Envelope>HTTP/1.1 200 OK
+
+
+public string SendWapPush(string[] destinationAddresses, string message,string url, string extendCode, string applicationId, string password)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><SendWapPush1 xmlns="http://openmas.chinamobile.com/sms"><destinationAddresses xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:string>13429614889</a:string></destinationAddresses><message>......</message><url>http://www.163.com</url><extendCode>0101</extendCode><applicationId>DefaultApplication</applicationId><password/></SendWapPush1></s:Body></s:Envelope>
+
+public string SendWapPush(string[] destinationAddresses, string message,string url, string extendCode, string applicationId, string password, DateTime expectSendTime)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><SendWapPush2 xmlns="http://openmas.chinamobile.com/sms"><destinationAddresses xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:string>13429614889</a:string></destinationAddresses><message>......</message><url>http://www.163.com</url><extendCode>0101</extendCode><applicationId>DefaultApplication</applicationId><password/><expectSendTime>2011-02-18T15:21:41.8465963+08:00</expectSendTime></SendWapPush2></s:Body></s:Envelope>
+
+public string AddTask(PeriodType periodType, PeriodValue periodValue, PeriodTime periodTime, string[] destinationAddresses, string message)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><AddTask1 xmlns="http://openmas.chinamobile.com/sms"><periodType>Month</periodType><periodValue xmlns:a="http://schemas.datacontract.org/2004/07/OpenMas" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:day>2</a:day><a:month>0</a:month><a:week>Sunday</a:week></periodValue><periodTime xmlns:a="http://schemas.datacontract.org/2004/07/OpenMas" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:hour>17</a:hour><a:minute>12</a:minute><a:second>11</a:second></periodTime><destinationAddresses xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:string>13429614889</a:string></destinationAddresses><message>......</message><extendCode>0101</extendCode><applicationId>DefaultApplication</applicationId><password/></AddTask1></s:Body></s:Envelope>
+
+
+public string AddTask(PeriodType periodType, PeriodValue periodValue, PeriodTime periodTime, string[] destinationAddresses, string message, string extendCode, string applicationId, string password, DateTime beginTime, DateTime endTime)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><AddTask2 xmlns="http://openmas.chinamobile.com/sms"><periodType>Month</periodType><periodValue xmlns:a="http://schemas.datacontract.org/2004/07/OpenMas" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:day>2</a:day><a:month>0</a:month><a:week>Sunday</a:week></periodValue><periodTime xmlns:a="http://schemas.datacontract.org/2004/07/OpenMas" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:hour>17</a:hour><a:minute>12</a:minute><a:second>11</a:second></periodTime><destinationAddresses xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:string>13429614889</a:string></destinationAddresses><message>......</message><extendCode>0101</extendCode><applicationId>DefaultApplication</applicationId><password/><beginTime>2011-02-18T17:13:05.5997933+08:00</beginTime><endTime>2011-03-18T00:00:00</endTime></AddTask2></s:Body></s:Envelope>
+
+public void RemoveTask(string taskId)
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><RemoveTask xmlns="http://openmas.chinamobile.com/sms"><taskId>bb404c2e-4fb2-42b2-a5be-bfcd8c81c897</taskId></RemoveTask></s:Body></s:Envelope>
+
+public SmsMessage GetMessage(string messageId)
+发送报文
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetMessage xmlns="http://openmas.chinamobile.com/sms"><messageId>a4b32715-a45f-4a68-b108-0d55ac5956a5</messageId></GetMessage></s:Body></s:Envelope>
+接收报文
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetMessageResponse xmlns="http://openmas.chinamobile.com/sms"><GetMessageResult i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/OpenMas" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/></GetMessageResponse></s:Body></s:Envelope>

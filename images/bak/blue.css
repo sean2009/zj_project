@@ -1,0 +1,61 @@
+@charset "utf-8";
+a{color:#003366}
+a:hover{color:#000080}
+#tipsContent{color:red}
+#CalcTable{background:url(blue_login.png) -50px 0px no-repeat}
+body{background:url(blue.png) #ADB9C5 left -127px repeat-x}
+#inter_body{background:url(blue_login.png) #28619B left -441px repeat-x;color:#0E5AAF}
+#left_line{background:url(blue_login.png) -25px top no-repeat}
+#right_line{background:url(blue_login.png) left top no-repeat}
+#center_line{background:url(blue_login.png) left -416px no-repeat}
+#center_body{background:url(blue_login.png) #FFFFFF left -381px no-repeat}
+#form_body{border:1px solid #0E5AAF}
+#form_body h1{background:#0E5AAF}
+#sub_input .sub_button,#sub_input .sub_btn_hover{border:3px #555555 double;background:url(blue_button.png) left top no-repeat}
+.sub_btn_hover{border:3px #000080 double;color:#000080}
+#alert{border:2px solid #0E5AAF}
+#errorinfo{color:#000080}
+input{color:#0E5AAF}
+
+#line{background:#0E5AAF}
+.cert_button,.cert_btn_hover{border:3px #0E5AAF double;color:#0E5AAF;background:url(blue_button.png) left -29px no-repeat}
+.cert_btn_hover{border:3px #000080 double;color:#000080}
+.dkey_button,.dkey_btn_hover{border:3px #0E5AAF double;color:#0E5AAF;background:url(blue_button.png) left -58px no-repeat}
+.dkey_btn_hover{border:3px #000080 double;color:#000080}
+#tranfor_bar .go_button{background:url(blue.png) -208px -104px no-repeat}
+.xb2,.xb3,.xb4{background:#D4E5F7;border-left:1px solid #D4E5F7;border-right:1px solid #D4E5F7}
+.xb1{margin:0 5px;background:#D4E5F7}
+.xboxcontent{display:block;background:#D4E5F7;border:0 solid #D4E5F7;border-width:0 2px;padding:3px 3px}
+h1{background:#3C78B5;color:#FFFFFF;font-size:13px}
+xbottom,xtop{margin:0 55px}
+.xsnazzy{margin-top:20px}
+/**************登录后部分*******/
+.list .bg_color{background:#E3E3E3}
+#head_banner{border-bottom:2px solid #305D8D;background:#FFFFFF}
+#menu_left ul{background:url(blue_y.png) -4px top repeat-y}
+#menu_left ul li.top{background:url(blue.png) left top no-repeat}
+#menu_left ul li.title{background:url(blue.png) left -15px no-repeat}
+#menu_left ul li.title h1{color:#FFFFFF;background-color:transparent}
+#menu_left ul li.bottom{background:url(blue.png) left -38px no-repeat}
+#menu_left ul li.list,#menu_left ul li.seled{border-bottom:1px solid #3C78B5;background-image:url(blue.png);background-position:-255px 4px;color:#003366}
+#menu_left ul li#select{background:url(blue.png) #D8E9F1 left -54px no-repeat}
+#customer_list{border:1px solid #305D8D;background:#FFFFFF}
+#content_center{border:1px solid #305D8D;background:#FFFFFF}
+#button_bar{border:1px solid #A3A3A3;background:#E3E3E3;color:#000000}
+#inline_list dt{color:#003366}
+#float_bra{background:url(/custom/2/images/blue.png) #ADB9C5 left -127px no-repeat}
+.main_td2{background-color:#D4E5F7}
+.main_table,.main_table_perfor{border:1px solid #D4E5F7}
+/************ 加速效果 ***********/
+#wrapperAcc{text-align:center;font-size:12px; padding-top:100px;}
+.bodyerAcc{width:780px;text-align:left;margin:0 auto;}
+#boxAcc table{ table-layout:fixed;border:0;}
+#boxAcc td{border-bottom:1px solid #999;height:32px;line-height:32px;}
+.tbr{background:#3c78b5;}
+.tbg{background:#77a7d8;height:28px;color:#fff;text-align:center;border-top:1px solid #fff;font-weight:bold;}
+.nms{width:380px;}
+.nms span{color:#666;margin-left:15px;}
+.ics{width:60px;padding-left:10px}
+.ims{width:180px;}
+.ims ul{margin-left:20px;list-style:none;font-size:1px;}
+.ims li{height:11px;line-heigth:11px;margin:1px 0;}
